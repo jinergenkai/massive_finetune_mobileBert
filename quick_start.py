@@ -5,8 +5,9 @@
 import os
 import sys
 
-from instruction import print_help
-from util import show_intent_list, check_and_install_requirements
+from src.instruction import print_help
+from src.util import show_intent_list, check_and_install_requirements
+from src.data_processing import prepare_data
 
 OUTPUT_DIR = "./models/mobilebert-massive-quick"
 MAX_LENGTH = 128
@@ -62,7 +63,6 @@ def quick_train(language="en-US", epochs=2, batch_size=16):
     
     # 2. Prepare data và tạo intent mapping
     print("\n2️⃣ Đang chuẩn bị dữ liệu...")
-    from data_processing import prepare_data
     train_df, dev_df, test_df, label_encoder = prepare_data(dataset)
     num_labels = len(label_encoder.classes_)
     

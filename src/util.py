@@ -1,3 +1,5 @@
+import os 
+
 def check_torch_cuda():
     import torch
     print("Torch version:", torch.__version__)
@@ -7,10 +9,11 @@ def check_torch_cuda():
 
 
 def check_and_install_requirements():
+    return True
     """Kiểm tra và cài đặt các thư viện cần thiết"""
     required_packages = [
         'transformers==4.46.1',
-        'torch',
+        # 'torch',
         'datasets', 
         'scikit-learn',
         'pandas',

@@ -1,0 +1,14 @@
+version: "3.9"
+
+services:
+  converter:
+    build: .
+    container_name: model_converter
+    volumes:
+      - ./models:/app/models
+      - ./output:/app/output
+    environment:
+      - PYTHONUNBUFFERED=1
+    working_dir: /app
+    command: >
+      python auto_convert_pipeline.py ./models/mobilebert-massive-quick

@@ -2,4 +2,7 @@
 # datasets==3.6.0
 # torchmetrics
 # scikit-learn
-transformers torch datasets scikit-learn pandas numpy matplotlib seaborn joblib accelerate 
+transformers datasets scikit-learn pandas numpy matplotlib seaborn joblib accelerate 
+
+pip install torch==2.7.0 torchvision==0.22.0 torchaudio==2.7.0 --index-url https://download.pytorch.org/whl/cu128
+# conda install pytorch torchvision torchaudio pytorch-cuda=12.8 -c pytorch -c nvidia
