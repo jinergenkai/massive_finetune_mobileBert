@@ -19,4 +19,4 @@ RUN pip install --no-cache-dir -r reqs_converter.txt
 COPY . .
 
 # Lệnh mặc định: chạy script convert
-CMD ["python", "auto_convert_pipeline.py", "./models/mobilebert-massive-quick"]
+CMD ["python", "auto_convert_pipeline.py", "jinergenkai/mobile-intent-bert"]
