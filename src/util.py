@@ -7,6 +7,18 @@ def check_torch_cuda():
     print("CUDA version:", torch.version.cuda)
     print("GPU name:", torch.cuda.get_device_name(0) if torch.cuda.is_available() else "None")
 
+def check_tensorflow_gpu():
+    import tensorflow as tf
+    print("TensorFlow version:", tf.__version__)
+    gpus = tf.config.list_physical_devices('GPU')
+    if gpus:
+        print("GPU(s) detected:")
+        for gpu in gpus:
+            print(" ", gpu)
+    else:
+        print("No GPU detected. TensorFlow will run on CPU.")
+check_tensorflow_gpu()
+
 
 def check_and_install_requirements():
     return True
