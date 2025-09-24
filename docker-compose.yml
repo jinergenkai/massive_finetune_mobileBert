@@ -11,4 +11,4 @@ services:
       - PYTHONUNBUFFERED=1
     working_dir: /app
     command: >
-      python auto_convert_pipeline.py jinergenkai/mobile-intent-bert
+      python auto_convert_pipeline.py ./models/mobile-intent-bert
